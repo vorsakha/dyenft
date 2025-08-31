@@ -1,0 +1,31 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hardhat node",
+    "test": "hardhat test",
+    "deploy": "hardhat ignition deploy ignition/modules/DyeNFT.ts",
+    "deploy:local": "hardhat ignition deploy ignition/modules/DyeNFT.ts --network localhost",
+    "mint": "hardhat run scripts/mint.ts",
+    "mint:local": "hardhat run scripts/mint.ts --network localhost",
+    "local": "npm run deploy:local && sleep 2 && npm run mint:local"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^3.0.1",
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.0",
+    "@types/node": "^22.18.0",
+    "forge-std": "github:foundry-rs/forge-std#v1.9.4",
+    "hardhat": "^3.0.3",
+    "typescript": "~5.8.0",
+    "viem": "^2.36.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@openzeppelin/contracts": "5.4.0"
+  }
+}
