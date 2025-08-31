@@ -1,6 +1,6 @@
 # 🖌️ Dye NFT Smart Contracts
 
-This directory contains the smart contracts for the **Dye NFT** project - a revolutionary ERC721 implementation that generates fully on-chain, animated SVG NFTs that dynamically change based on real-time blockchain data.
+This directory contains the smart contracts for the **Dye NFT** project - a ERC721 implementation that generates fully on-chain, animated SVG NFTs that dynamically change based on real-time blockchain data.
 
 ## 📋 Contract Overview
 
@@ -28,7 +28,7 @@ The main contract implements ERC721 standard with dynamic, on-chain SVG generati
 
 ### Prerequisites
 - Node.js 18+
-- npm or yarn
+- npm
 
 ### Setup
 ```bash
@@ -54,20 +54,6 @@ npm run local
 | `npm run mint:local` | Mint new NFT on localhost |
 | `npm run local` | Deploy + mint in one command |
 
-## 🧪 Testing
-
-Run comprehensive test suites:
-
-```bash
-# Run all tests
-npm test
-
-# Run only Solidity tests
-npx hardhat test solidity
-
-# Run only TypeScript integration tests
-npx hardhat test nodejs
-```
 
 ### Test Coverage
 
@@ -88,15 +74,6 @@ npm run dev
 
 # Terminal 2: Deploy and mint
 npm run local
-```
-
-### Testnet (Sepolia)
-```bash
-# Set private key
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-
-# Deploy to Sepolia
-npm run deploy -- --network sepolia
 ```
 
 ### Mainnet
@@ -169,19 +146,6 @@ contracts/
 - **hardhat**: ^3.0.3 - Development framework
 - **viem**: ^2.36.0 - TypeScript Ethereum library
 
-## 📊 Gas Analysis
-
-The contract is optimized for gas efficiency:
-- Pure functions for SVG generation (no storage reads)
-- Efficient string concatenation
-- Minimal storage usage
-- Batch operations where applicable
-
-### Estimated Gas Costs
-- **Deployment**: ~2.5M gas
-- **Minting**: ~150K gas
-- **tokenURI()**: ~45K gas (varies with complexity)
-
 ## 🔒 Security
 
 ### Audit Considerations
@@ -196,14 +160,6 @@ The contract is optimized for gas efficiency:
 - Foundry-compatible test suite
 - TypeScript integration tests
 - Gas optimization verified
-
-## 📈 Deployment History
-
-| Network | Status | Address | Block |
-|---------|--------|---------|--------|
-| Localhost | ✅ Active | `0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9` | Latest |
-| Sepolia | 🟡 Ready | - | - |
-| Mainnet | 🟡 Ready | - | - |
 
 ## 🤝 Development
 
@@ -220,7 +176,5 @@ The contract is optimized for gas efficiency:
 - Comprehensive documentation
 
 ---
-
-**Built with ❤️ using Hardhat 3, OpenZeppelin, and Viem**
 
 For the complete project overview, see the [root README](../README.md).
