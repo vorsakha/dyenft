@@ -2,6 +2,7 @@
 pragma solidity ^0.8.28;
 
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import {ERC721Enumerable} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
@@ -9,7 +10,7 @@ import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 /// @notice ERC721 where the image and metadata are generated fully on-chain.
 ///         Visual properties change based on on-chain data like owner balance
 ///         and current block. Enhanced with layered aesthetic elements.
-contract DyeNFT is ERC721 {
+contract DyeNFT is ERC721, ERC721Enumerable {
   using Strings for uint256;
 
   uint256 private _nextTokenId = 1;
@@ -92,6 +93,30 @@ contract DyeNFT is ERC721 {
         Base64.encode(bytes(json))
       )
     );
+  }
+
+  function _update(address to, uint256 tokenId, address auth)
+    internal
+    override(ERC721, ERC721Enumerable)
+    returns (address)
+  {
+    return super._update(to, tokenId, auth);
+  }
+
+  function _increaseBalance(address account, uint128 value)
+    internal
+    override(ERC721, ERC721Enumerable)
+  {
+    super._increaseBalance(account, value);
+  }
+
+  function supportsInterface(bytes4 interfaceId)
+    public
+    view
+    override(ERC721, ERC721Enumerable)
+    returns (bool)
+  {
+    return super.supportsInterface(interfaceId);
   }
 
   function _generateSVG(
