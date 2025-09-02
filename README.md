@@ -56,7 +56,7 @@ Open [http://localhost:5173](http://localhost:5173) to:
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd nft
+   cd dyenft
    ```
 
 2. **Install contract dependencies**
