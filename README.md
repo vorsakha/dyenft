@@ -2,8 +2,6 @@
 
 **Dye NFT** is a revolutionary ERC721 smart contract that generates fully animated, on-chain SVG NFTs that dynamically change based on real-time blockchain data. Each NFT evolves and transforms based on its owner's ETH balance, current block number, and other on-chain variables.
 
-![Dye NFT Demo](https://via.placeholder.com/350x350/1a1a2e/ffffff?text=Dye+NFT+Preview)
-
 ## ✨ What Makes Dye NFTs Special
 
 Unlike static NFTs, **Dye NFTs** are living, breathing digital art that continuously evolves:
