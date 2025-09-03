@@ -247,19 +247,5 @@ npm run dev  # Contracts
 cd frontend && npm run dev  # Frontend
 ```
 
-## 🙏 Acknowledgments
-
-### Smart Contract
-- **OpenZeppelin** for secure, audited smart contracts
-- **Hardhat** for Ethereum development tools
-
-### Frontend
-- **React** for building interactive user interfaces
-- **Vite** for lightning-fast development and building
-- **Tailwind CSS** for utility-first styling
-- **shadcn/ui** for beautiful, accessible components
-- **Wagmi** for seamless Web3 wallet integration
-- **Viem** for TypeScript-first Ethereum interactions
-
 ---
 
